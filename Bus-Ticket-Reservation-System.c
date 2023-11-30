@@ -4,6 +4,126 @@ Date: 27/11/2023 (Date when progress 1 was uploaded)
 */
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define totalRoutes 50
+
+// Structure to represent a bus route
+typedef struct 
+{
+    char pickup[50];
+    char destination[50];
+    char departureTime[10];
+    float ticketPrice;
+} Routes;
+
+
+// Function prototypes for Routes
+void initializeRoutes(Routes routes[]);
+int addRoute(Routes routes[], int numRoutes);
+void displayRoutes(Routes routes[], int numRoutes);
+Routes findRoute(Routes routes[], int numRoutes, const char pickup[], const char destination[]);
+void updateRoute(Routes routes[], int numRoutes);
+
+// Function to initialize routes array
+void initializeRoutes(Routes routes[])
+{
+    int index;
+    for (index = 0; index < totalRoutes; index++)
+    {
+        // Initialize each route's attributes
+        strcpy(routes[index].pickup, "");
+        strcpy(routes[index].destination, "");
+        strcpy(routes[index].departureTime, "");
+        routes[index].ticketPrice = 0.0;
+    }
+}
+
+// Function to add a new route to the array
+int addRoute(Routes routes[], int numRoutes)
+{
+    if (numRoutes < totalRoutes)
+    {
+        printf("Enter the pickup location:\n");
+        scanf("%s", &routes[numRoutes].pickup);
+        
+        printf("Enter the destination location:\n");
+        scanf("%s", &routes[numRoutes].destination);
+        
+        printf("Enter the departure time:\n");
+        scanf("%s", &routes[numRoutes].departureTime);
+        
+        printf("Enter the ticket price:\n");
+        scanf("%f", &routes[numRoutes].ticketPrice);
+        
+        printf("Route added successfully!\n");
+        
+        return numRoutes + 1; // Increment the number of routes
+    } 
+    else 
+    {
+        printf("Maximum routes reached. Cannot add more routes.\n");
+        return numRoutes;
+    }
+}
+
+// Function to display all routes in the array
+void displayRoutes(Routes routes[], int numRoutes) 
+{
+    int index;
+    printf("\n*** \t Bus Routes \t ***\n");
+    printf("Pickup\tDestination\tDeparture Time\tTicket Price\n");
+    for (index = 0; index < numRoutes; index++) 
+    {
+        printf("%s\t%s\t%s\t%.2f\n", routes[index].pickup, routes[index].destination, routes[index].departureTime, routes[index].ticketPrice);
+    }
+}
+
+// Function to find a route based on source and destination
+Routes findRoute(Routes routes[], int numRoutes, const char pickup[], const char destination[]) 
+{
+    Routes notFoundRoute = { "", "", "", 0.0 }; // Default route if the searched route is not found
+
+    int index;
+    for (index = 0; index < numRoutes; index++) 
+    {
+        if (strcmp(routes[index].pickup, pickup) == 0 && strcmp(routes[index].destination, destination) == 0) 
+        {
+            return routes[index]; 
+        }
+    }
+    return notFoundRoute; // Return a default route if not found
+}
+
+// Function to update an existing route
+void updateRoute(Routes routes[], int numRoutes) 
+{
+    char pickup[50], destination[50];
+    
+    printf("Enter source of the route to update: ");
+    scanf("%s", &pickup);
+
+    printf("Enter destination of the route to update: ");
+    scanf("%s", &destination);
+
+    Routes foundRoute = findRoute(routes, numRoutes, pickup, destination);
+
+    if (strcmp(foundRoute.pickup, "") != 0) 
+    {
+        printf("Enter new departure time: ");
+        scanf("%s", foundRoute.departureTime);
+
+        printf("Enter new ticket price: ");
+        scanf("%f", &foundRoute.ticketPrice);
+
+        printf("Route updated successfully!\n");
+    } 
+    else 
+    {
+        printf("Route not found. Cannot update.\n");
+    }
 
 
 //bookinggg
