@@ -1,50 +1,74 @@
-# PfFall23-Project-Bus-Ticket-Reservation-System
-## Creators: Havish Chowdhry, Emaan Arshad, Dania Khan.
-Desc: A ticket reservation system for buses.
+# Proposal for Bus Ticket Reservation System
 
+## Project Overview:
 
+This project aims to develop a robust and user-friendly Bus Ticket Reservation System in C language. The system caters to both administrators and customers, providing functionalities such as route management, seat reservation, booking cancellation, and occupancy rate calculation. The project utilizes file handling to persist data, ensuring continuity between program runs.
 
+## Data Structures:
 
-**1. User Authentication:**
-   - Implement a basic login system where users (both customers and admins) can log in using their credentials.
-   - Store usernames and passwords securely, perhaps using basic encryption techniques.
+- **Routes Struct:**
+  - `pickup`: Source location of the route.
+  - `destination`: Destination location of the route.
+  - `departureTime`: Time of departure.
+  - `ticketPrice`: Price of a ticket for the route.
 
-**2. Bus Route Management:**
-   - Create a data structure to store bus routes, including details like source, destination, departure time, and ticket price.
-   - Implement functions to add new routes, update existing ones, and delete routes if necessary.
+- **Booking Struct:**
+  - `busID`: ID of the bus.
+  - `seatNumber`: Number of the reserved seat.
+  - `customerName`: Name of the customer who reserved the seat.
 
-**3. Seat Reservation:**
-   - Use arrays to represent the seating arrangement of buses. For example, a 2D array where rows represent buses and columns represent seats.
-   - Implement functions to check seat availability, reserve seats, and cancel reservations.
-   - Ensure you handle boundary cases and invalid inputs gracefully.
+- **Admin Struct:**
+  - `username`: Admin username for authentication.
+  - `password`: Admin password for authentication.
 
-**4. Ticket Booking:**
-   - Allow users to search for buses based on source, destination, and departure time.
-   - Once the user selects a bus, allow them to choose the number of seats to book.
-   - Generate a booking ID and display it to the user for future reference.
+- **Arrays:**
+  - `seats[][]`: 2D array to represent the occupancy status of seats in each bus.
+  - Arrays for storing route details, booking information, and admin credentials.
 
-**5. Admin Features:**
-   - Only authenticated admins should have access to admin features.
-   - Admins can view all bookings, including customer details and booking IDs.
-   - Implement a feature for admins to cancel bookings, if required.
-   - Implement a feature for admins to view the occupancy rate of buses.
+- **File Pointers:**
+  - Used for reading and writing data to files for persistence.
 
-**6. Error Handling:**
-   - Implement robust error handling for various scenarios, such as invalid inputs, seat availability checks, etc.
-   - Provide clear and helpful error messages to guide the users.
+## Major Challenges Faced:
 
-**7. Data Persistence:**
-   - Implement a basic form of data persistence using file handling. Store bus routes, bookings, and user data in text files.
-   - Create functions to read data from files when the program starts and save data back to files when the program exits.
+1. **Error Handling and Exception Handling:**
+   - Implementation of robust error handling and handling different scenarios posed a significant challenge.
+   - The team encountered difficulties in tracking and managing errors in various situations.
 
-**8. User-Friendly Interface:**
-   - Although you cannot use UI, ensure that the text-based interface is user-friendly and intuitive. Provide clear instructions and options to guide the users.
+2. **Situational Complexity:**
+   - Dealing with the complexity of different situations, such as insufficient account balances for reservations, presented a hurdle.
+   - The team found it challenging to implement error tracking in these diverse scenarios.
 
-**9. Extra Features:**
-   - Implement a feature to calculate the total revenue earned by the bus service.
-   - Implement a feature to display the upcoming buses based on the current system time.
-   - Add a feature to sort buses based on departure time or price to help users find suitable options quickly.
+## Logical Structure:
 
-**10. Code Modularity and Comments:**
-   - Organize your code into functions and modules for better readability and maintainability.
-   - Add comments to explain complex sections of your code, making it easier for others (and your future self) to understand.
+- **Modular Code:**
+  - The code is divided into structured modules for readability and maintainability.
+  - User-defined functions handle specific functionalities, promoting code reusability.
+
+- **Menu-Driven Interface:**
+  - The program utilizes a menu-driven interface for user interaction.
+  - Users, both administrators and customers, can navigate through various options to perform desired actions.
+
+- **Error Messages:**
+  - Informative error messages are displayed in case of invalid inputs or system errors.
+
+- **Data Persistence:**
+  - Data related to routes, bookings, and admins are persistently stored in files, ensuring data continuity across program executions.
+
+## Future Enhancements:
+
+- **Security Measures:**
+  - Implement additional security measures such as encryption for admin credentials.
+  - Enhance error tracking mechanisms to improve system security.
+
+- **Graphical User Interface (GUI):**
+  - Consider incorporating a graphical user interface for a more intuitive user experience.
+
+- **Online Reservation System:**
+  - Extend the system to support online reservations and payments.
+
+- **Enhanced Error Reporting:**
+  - Implement a comprehensive error tracking system to handle a variety of scenarios and provide detailed error reports.
+
+## Conclusion:
+
+This Bus Ticket Reservation System project successfully addresses the requirements of both administrators and customers, providing a scalable foundation for future enhancements. The team acknowledges the challenges faced in error handling and situational complexity and is committed to improving these aspects for a more resilient and user-friendly system. The project demonstrates the team's dedication to overcoming obstacles and continuous learning in the development process.
