@@ -12,8 +12,8 @@ Date: 21/12//2023
 #include <unistd.h>
 
 #define totalSeats 50
-#define totalBuses 10
-#define totalRoutes 50
+#define totalBuses 78
+#define totalRoutes 100
 #define totalAdmins 3
 #define ANSI_COLOR_CYAN "\x1b[36m"
 #define ANSI_COLOR_RESET "\x1b[0m"
