@@ -55,7 +55,8 @@ This project aims to develop a robust and user-friendly Bus Ticket Reservation S
   - `password`: Admin password for authentication.
 
 - **Arrays:**
-
+  - seats[][]: 2D array to represent the occupancy status of seats in each bus.
+  - Arrays for storing route details, booking information, and admin credentials
 
 - **File Pointers:**
   - Used for reading and writing data to files for persistence.
