@@ -19,11 +19,11 @@
      - Displaying Routes
      - Updating a Route
 - Havish Chowdhry
-    - Booking Functions
+  - Booking Functions
      - Reserving a Seat
      - Canceling Reservation
      - Viewing All Bookings
-  -  File I/O Functions (loading/saving data)
+  - File I/O Functions (loading/saving data)
 
 
 
