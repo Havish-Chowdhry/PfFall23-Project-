@@ -297,19 +297,19 @@ void saveRouteToFile(const Routes *route)
 }
 
 
-void displayRoutes_bus(Routes routes[], int numRoutes)
+void displayRoutes(Routes routes[], int numRoutes)
 {
     printf("Num Routes: %d",numRoutes);
     int index;
     printf("\n\t\t\t|* Bus Routes *|\n");
     printf("			--------------------\n\n");
-    printf("|Bus|\t|Pickup|\t|Destination|\t|Departure Time| |Ticket Price|\n");
+    printf("|Pickup|\t|Destination|\t|Departure Time| |Ticket Price|\n");
     printf("-----------------------------------------------------------------------\n");
 
     
     for (index = 0; index < numRoutes; index++)
     {
-        printf("%d\t%.7s\t\t%.7s\t\t%.4s\t\t %.2f\n", index+1 , routes[index].pickup, routes[index].destination,
+        printf("%.7s\t\t%.7s\t\t%.4s\t\t %.2f\n", routes[index].pickup, routes[index].destination,
                routes[index].departureTime, routes[index].ticketPrice);
     }
 
@@ -319,6 +319,7 @@ void displayRoutes_bus(Routes routes[], int numRoutes)
         printf("Error opening file for reading\n");
         return;
     }
+
     Routes fileRoute;
     while (fscanf(file, "%s %s %s %f\n", fileRoute.pickup, fileRoute.destination,
                   fileRoute.departureTime, &fileRoute.ticketPrice) == 4)
@@ -346,8 +347,6 @@ void displayRoutes_bus(Routes routes[], int numRoutes)
 
     fclose(file);
 }
-
-
 
 void displayRoutes(Routes routes[], int numRoutes)
 {
