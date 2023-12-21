@@ -1,9 +1,9 @@
 # Proposal for Bus Ticket Reservation System
 
 ## Team Members:
--Havish Chowdhry 23K-0058 <br> 
--Emaan Arshad    23I-2560<br> 
--Dania Khan      23K-0072 <br> 
+- Havish Chowdhry 23K-0058 <br> 
+- Emaan Arshad    23I-2560<br> 
+- Dania Khan      23K-0072 <br> 
 
 ## Individual Contribution:
 
