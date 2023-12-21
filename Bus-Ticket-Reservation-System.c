@@ -15,7 +15,7 @@ Date: 21/12//2023
 #define totalBuses 78
 #define totalRoutes 100
 #define totalAdmins 3
-#define ANSI_COLOR_CYAN "\x1b[36m"
+#definedania khan "\x1b[36m"
 #define ANSI_COLOR_RESET "\x1b[0m"
 #define ANSI_COLOR_GRAY "\x1b[90m"
 
@@ -27,8 +27,8 @@ typedef struct {
 } Routes;
 
 typedef struct {
-    int busID;
-    int seatNumber;
+    int employeid
+    int seatnumbhi
     char customerName[50];
 } Booking;
 
