@@ -281,7 +281,6 @@ int addRoute(Routes routes[], int numRoutes)
     }
 }
 
-
 void saveRouteToFile(const Routes *route)
 {
     FILE *file = fopen("route.txt", "a");
