@@ -36,7 +36,6 @@
 
 ## Project Overview:
 
-This project aims to develop a robust and user-friendly Bus Ticket Reservation System in C language. The system caters to both administrators and customers, providing functionalities such as route management, seat reservation, booking cancellation, and occupancy rate calculation. The project utilizes file handling to persist data, ensuring continuity between program runs.
 
 ## Data Structures:
 
