@@ -319,7 +319,6 @@ void displayRoutes_bus(Routes routes[], int numRoutes)
         printf("Error opening file for reading\n");
         return;
     }
-
     Routes fileRoute;
     while (fscanf(file, "%s %s %s %f\n", fileRoute.pickup, fileRoute.destination,
                   fileRoute.departureTime, &fileRoute.ticketPrice) == 4)
