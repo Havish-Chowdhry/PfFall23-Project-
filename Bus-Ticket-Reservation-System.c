@@ -232,7 +232,6 @@ printf(ANSI_COLOR_GRAY"\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n"ANSI_COLOR_
 }
 
 
-
 void initializeRoutes(Routes routes[], int numRoutes)
 {
     int index;
@@ -267,9 +266,9 @@ int addRoute(Routes routes[], int numRoutes)
         
         saveRouteToFile(&routes[numRoutes]);
 
-        printf("\n	***Route Added Successfully***\n");
+        printf("\n	**Route Added Successfully**\n");
         printf("==> The program will now ask you to choose an option again.");
-        printf("\n\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
+        printf("\n\n*--------------------\n");
         sleep(5);
         system("cls");
 
@@ -277,7 +276,7 @@ int addRoute(Routes routes[], int numRoutes)
     }
     else
     {
-        printf("***Maximum Routes Reached. Cannot Add More Routes***\n");
+        printf("**Maximum Routes Reached. Cannot Add More Routes**\n");
         return numRoutes;
     }
 }
@@ -288,7 +287,7 @@ void saveRouteToFile(const Routes *route)
     FILE *file = fopen("route.txt", "a");
     if (file == NULL)
     {
-        printf("*Error opening file for appending*\n");
+        printf("Error opening file for appending\n");
         return;
     }
 
@@ -303,7 +302,7 @@ void displayRoutes_bus(Routes routes[], int numRoutes)
 {
     printf("Num Routes: %d",numRoutes);
     int index;
-    printf("\n\t\t\t|*** Bus Routes ***|\n");
+    printf("\n\t\t\t|* Bus Routes *|\n");
     printf("			--------------------\n\n");
     printf("|Bus|\t|Pickup|\t|Destination|\t|Departure Time| |Ticket Price|\n");
     printf("-----------------------------------------------------------------------\n");
@@ -318,7 +317,7 @@ void displayRoutes_bus(Routes routes[], int numRoutes)
     FILE *file = fopen("route.txt", "r");
     if (file == NULL)
     {
-        printf("*Error opening file for reading*\n");
+        printf("Error opening file for reading\n");
         return;
     }
 
@@ -356,7 +355,7 @@ void displayRoutes(Routes routes[], int numRoutes)
 {
     printf("Num Routes: %d",numRoutes);
     int index;
-    printf("\n\t\t\t|*** Bus Routes ***|\n");
+    printf("\n\t\t\t|* Bus Routes *|\n");
     printf("			--------------------\n\n");
     printf("|Pickup|\t|Destination|\t|Departure Time| |Ticket Price|\n");
     printf("-----------------------------------------------------------------------\n");
@@ -371,7 +370,7 @@ void displayRoutes(Routes routes[], int numRoutes)
     FILE *file = fopen("route.txt", "r");
     if (file == NULL)
     {
-        printf("*Error opening file for reading*\n");
+        printf("Error opening file for reading\n");
         return;
     }
 
@@ -421,7 +420,7 @@ Routes findRoute(Routes routes[], int numRoutes, const char pickup[], const char
     FILE *file = fopen("route.txt", "r");
     if (file == NULL)
     {
-        printf("*Error opening file for reading*\n");
+        printf("Error opening file for reading\n");
         return notFoundRoute;
     }
 
@@ -506,7 +505,7 @@ void initializeBookings(Booking bookings[], int numBookings)
     FILE *file = fopen("booking.txt", "r");
     if (file == NULL)
     {
-        printf("*Error opening file for reading*\n");
+        printf("Error opening file for reading\n");
         return;
     }
 
@@ -528,14 +527,14 @@ void initializeBookings(Booking bookings[], int numBookings)
 
 void displayBookings(Booking bookings[], int numBookings)
 {
-    printf("\n*** \t Seat Reservations \t ***\n");
+    printf("\n** \t Seat Reservations \t **\n");
     printf("Bus ID\t Seat Number\t Customer Name\n");
 
     
     FILE *file = fopen("booking.txt", "r");
     if (file == NULL)
     {
-        printf("*Error opening file for reading*\n");
+        printf("Error opening file for reading\n");
         return;
     }
 
@@ -699,7 +698,6 @@ void cancelReservation(int seats[][totalSeats], int numBuses, Booking bookings[]
         printf("No reservation found for bus ID %d and seat %d.\n", busId, seatNumber);
     }
 }
-
 
 void viewAllBookings(Booking bookings[], int *numBookings)
 {
