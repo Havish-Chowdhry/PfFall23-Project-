@@ -6,7 +6,24 @@
 - Dania Khan      - 23K-0072 <br> 
 
 ## Individual Contribution:
-
+- Emaan Arshad
+  - User Interface (main function)
+    -  Log-in
+    - Sign-up
+    -  Logout
+    - Displaying Menu
+    -  Exiting the program
+- Dania Khan
+   - Routes Functions
+     - Adding a Route
+     - Displaying Routes
+     - Updating a Route
+- Havish Chowdhry
+    - Booking Functions
+     - Reserving a Seat
+     - Canceling Reservation
+     - Viewing All Bookings
+  -  File I/O Functions (loading/saving data)
 
 
 
