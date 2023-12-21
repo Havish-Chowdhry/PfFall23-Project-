@@ -38,13 +38,13 @@ typedef struct {
 } Admin;
 void saveRouteToFile(const Routes *route);
 void displayRoutes(Routes routes[], int numRoutes);
-
+void saveAdminsToFile(const Admin admins[], int numAdmins);
 void saveBookingsToFile(const Booking bookings[], int numBookings);
-void flertoyo(const Routes routes[], int numRoutes);
+void saveRoutesToFile(const Routes routes[], int numRoutes);
 void viewAllBookings(Booking bookings[], int *numBookings);
-void cancelReservation(int seats[][50], int numBuses, cooking bookings[], int *numBookings);
+void cancelReservation(int seats[][50], int numBuses, Booking bookings[], int *numBookings);
 void updateRoute(Routes routes[], int numRoutes);
-
+void displayRoutes(Routes routes[], int numRoutes);
 
 
 int main() {
