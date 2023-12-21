@@ -13,11 +13,7 @@
     -  Logout
     - Displaying Menu
     -  Exiting the program
-- Dania Khan
-   - Routes Functions
-     - Adding a Route
-     - Displaying Routes
-     - Updating a Route
+
 - Havish Chowdhry
   - Booking Functions
      - Reserving a Seat
