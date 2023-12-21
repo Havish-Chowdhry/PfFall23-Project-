@@ -1,5 +1,19 @@
 # Proposal for Bus Ticket Reservation System
 
+## Team Members:
+Havish Chowdhry 23K-0058
+Emaan Arshad    23I-2560
+Dania Khan      23K-0072
+
+## Individual Contribution:
+
+
+
+
+
+
+
+
 ## Project Overview:
 
 This project aims to develop a robust and user-friendly Bus Ticket Reservation System in C language. The system caters to both administrators and customers, providing functionalities such as route management, seat reservation, booking cancellation, and occupancy rate calculation. The project utilizes file handling to persist data, ensuring continuity between program runs.
@@ -27,6 +41,50 @@ This project aims to develop a robust and user-friendly Bus Ticket Reservation S
 
 - **File Pointers:**
   - Used for reading and writing data to files for persistence.
+
+## Functionalities:
+
+### Admin Functions:
+
+1. **Admin Login:**
+   - Authenticate admin by entering a username and password.
+   - Restrict access to admin functionalities only after successful authentication.
+
+2. **Admin Signup:**
+   - Allow a new admin to sign up by entering a username and password.
+   - Persist admin credentials in the file for future logins.
+
+3. **View Bus Routes:**
+   - Display a list of all available bus routes with details such as pickup, destination, departure time, and ticket price.
+
+4. **Add Route:**
+   - Add a new bus route by providing pickup location, destination, departure time, and ticket price.
+   - Limit the number of routes to avoid exceeding system capacity.
+
+5. **Update Route:**
+   - Modify the details of an existing route (e.g., change departure time or ticket price).
+   - Ensure that only authenticated admins can perform route updates.
+
+6. **Reserve a Seat:**
+   - Reserve one or more seats on a specific bus by providing the bus ID, the number of seats, and customer names.
+   - Update the occupancy status of the reserved seats.
+
+7. **Cancel Reservation:**
+   - Cancel a reservation by providing the bus ID and seat number.
+   - Free up the reserved seats and update the booking records.
+
+8. **View All Bookings:**
+   - Display a list of all seat reservations with booking ID, bus ID, seat number, and customer name.
+   - Provide admins with an overview of all current bookings.
+
+9. **Logout:**
+   - Log out the currently authenticated admin.
+   - Restrict access to admin functionalities after logout until reauthentication.
+
+10. **Exit:**
+    - Save data to files and exit the program.
+    - Ensure that data continuity is maintained across program runs.
+
 
 ## Major Challenges Faced:
 
