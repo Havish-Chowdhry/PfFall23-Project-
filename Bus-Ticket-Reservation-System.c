@@ -12,10 +12,10 @@ Date: 21/12//2023
 #include <unistd.h>
 
 #define totalSeats 50
-#define totalBuses 78
-#define totalRoutes 100
+#define totalBuses 10
+#define totalRoutes 50
 #define totalAdmins 3
-#definedania khan "\x1b[36m"
+#define ANSI_COLOR_CYAN "\x1b[36m"
 #define ANSI_COLOR_RESET "\x1b[0m"
 #define ANSI_COLOR_GRAY "\x1b[90m"
 
@@ -27,8 +27,8 @@ typedef struct {
 } Routes;
 
 typedef struct {
-    int employeid
-    int seatnumbhi
+    int busID;
+    int seatNumber;
     char customerName[50];
 } Booking;
 
@@ -36,7 +36,6 @@ typedef struct {
     char username[20];
     char password[20];
 } Admin;
-
 void saveRouteToFile(const Routes *route);
 void displayRoutes(Routes routes[], int numRoutes);
 void saveAdminsToFile(const Admin admins[], int numAdmins);
