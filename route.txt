@@ -1,3 +1,4 @@
+//pickup//destination//pickuptime//ticketprice
 Gulshan Johar 7:00 200.00
 lahore karcahi 10:00 800.00
 Malir Fast 10:00 500.00
